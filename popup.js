@@ -4,7 +4,7 @@ function renderStatus(statusText) {
 
 
 function sayHi() {
-  renderStatus("hello!!");
+  renderStatus("jinas update!!");
 }
 
 document.addEventListener('DOMContentLoaded', function() {
