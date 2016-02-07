@@ -1,13 +1,13 @@
 {
-  "name": "yolo",
+  "name": "Blackout",
   "version": "1.1.1",
   "description": "lets you summon evil.",
   "permissions" : [
-    "activeTab"
+    "activeTab", "tabs"
   ],
   "background" : {
     "scripts" : ["background.js"],
-    "persistent" : false
+    "persistent" : true
   },
   "content_scripts": [{
       "matches": ["*://*.com/*"],
