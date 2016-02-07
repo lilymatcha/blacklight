@@ -3,14 +3,14 @@
   "version": "1.1.1",
   "description": "Makes your tab into a digital blackout poetry canvas.",
   "permissions" : [
-     "tabs"
+     "tabs", "activeTab", "http://*/*", "https://*/*", "https://blog.hartleybrody.com/chrome-extension/"
   ],
-  "background" : {
-    "scripts" : ["background.js"],
-    "persistent" : true
-  },
+  // "background" : {
+  //   "scripts" : ["background.js"],
+  //   "persistent" : true
+  // },
   "content_scripts": [{
-      "matches": ["*://*.com/*"],
+      "matches": ["http://*/*", "https://*/*"],
       "js": ["jquery-1.12.0.js"],
       "run_at": "document_end"
   }],
