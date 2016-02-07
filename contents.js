@@ -28,5 +28,13 @@ function selectHTML() {
     }
 }
 
- var mytext = selectHTML();
+ 
+function checkKeyPressed(e) {
+    if (e.keyCode == "66") {
+        var mytext = selectHTML();
     $('.blacked_out').css({"background-color": "#000000", "color": "#000000"});
+    }
+}
+window.addEventListener("keydown", checkKeyPressed, false);
+
+
