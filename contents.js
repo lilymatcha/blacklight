@@ -28,29 +28,55 @@ function selectHTML() {
     }
 }
 
-console.log("on active tab");
+// console.log("on active tab");
 
 var handler = function checkKeyPressed(e) {
                 if (e.keyCode == "66") {
                     var mytext = selectHTML();
-                $('.blacked_out').css({"background-color": "#000000", "color": "#000000"});
+                    $('.blacked_out').css({"background-color": "#000000", "color": "#000000"});
                 }
               }
 
-var buttonpressed;
+// var buttonpressed;
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-        console.log("received msg from popup:" + request.greeting);
-        buttonpressed = request.greeting;
-        console.log("in message function, buttonpressed == " + buttonpressed);
+        // console.log("received msg from popup:" + request.greeting);
+        // buttonpressed = request.greeting;
+        // console.log("in message function, buttonpressed == " + buttonpressed);
+
+
+        if (request.greeting == "on") {
+            window.addEventListener("keydown", handler, false);
+            console.log("in handler, ON");
+        } else if (request.greeting == "off") {
+            window.removeEventListener("keydown", handler, false);
+            console.log("in handler, OFF");
+        }
     }
 )
 
-console.log("otside message function, buttonpressed == " + buttonpressed);
+// var toggle = false;
 
-if (buttonpressed == "on")
-    window.addEventListener("keydown", handler, false);
-else if (buttonpressed == "off")
-    window.removeEventListener("keydown", handler, false);
+// chrome.browserAction.onClicked.addListener(function(tab) {
+//   toggle = !toggle;
+//   if (toggle) {
+//     chrome.browserAction.setIcon({path: "icon.png", tabId:tab.id});
+//     // chrome.tabs.executeScript(tab.id, {file:"SCRIPT.user.js"});
+//     window.addEventListener("keydown", handler, false);
+//     console.log("ONNNNN");
+//   } else {
+//     chrome.browserAction.setIcon({path: "icon_off.png", tabId:tab.id});
+//     // chrome.tabs.executeScript(tab.id, {code:"alert()"});
+//     window.removeEventListener("keydown", handler, false);
+//     console.log("OFFFFFF");
+//   }
+// });
+
+// console.log("otside message function, buttonpressed == " + buttonpressed);
+
+// if (buttonpressed == "on")
+//     window.addEventListener("keydown", handler, false);
+// else if (buttonpressed == "off")
+//     window.removeEventListener("keydown", handler, false);
 
