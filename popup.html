@@ -1,55 +1,18 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <title>Blacklight Popup</title>
-    <style>
-    body {
-      overflow: hidden;
-      margin: 0px;
-      padding: 0px;
-      background: white;
-    }
-
-    div:first-child {
-      margin-top: 0px;
-    }
-
-    div {
-      cursor: pointer;
-      text-align: center;
-      padding: 1px 3px;
-      font-family: sans-serif;
-      font-size: 3em;
-      width: 200px;
-      margin-top: 1px;
-      background: #cccccc;
-    }
-    div:hover {
-      background: #aaaaaa;
-    }
-    #logo {
-      color: #fff;
-      background-color: #000;
-    }
-    #on {
-      color: #000;
-      background-color: #fff;
-    }
-    #off {
-      color: #000;
-      background-color: gray;
-    }
-    #save {
-      color: #fff;
-      background-color: green;
-    }
-    </style>
+    
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+    <link href='popup.css' rel='stylesheet'>
     <script src="popup.js"></script><style type="text/css"></style>
   </head>
-  <body>
-    <a href="http://google.com"><div id="logo">blacklight</div></a>
-    <div id="on">on</div>
-    <div id="off">off</div>
-    <div id="save">save</div>
-  
 
-</body></html>
+  <body>
+    <div id="logo">blacklight</div>
+    <div id="info">highlight any text<br> &amp; press b to blackout</div>
+  </body>
+
+</html>

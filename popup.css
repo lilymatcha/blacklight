@@ -1,0 +1,34 @@
+body {
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  background: white;
+}
+
+div:first-child {
+  margin-top: 0px;
+}
+
+div {
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin-top: 1px;
+  background: #cccccc;
+  width: 200px;
+}
+div:hover {
+  background: #aaaaaa;
+}
+#logo {
+  color: #fff;
+  background-color: #000;
+}
+#info {
+  color: #000;
+  background-color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+}
